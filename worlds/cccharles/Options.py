@@ -1,20 +1,22 @@
 from dataclasses import dataclass
 from Options import DefaultOnToggle, Range, Toggle, DeathLink, Choice, PerGameCommonOptions, Visibility
-from .Items import useless_items
 
 
-class ScrapsAmountAsCheck(Range):
+class RandomizeScraps(Choice):
     """
-    What number of scraps are required to get an item as a check.
-    The collected scraps are not added to the inventory.
-    You must collect this number of scraps to send 1 randomized item.
+    Randomize the 636 scraps on the ground.
 
-    '0' means the option is disabled and no scraps is randomized (except mission rewards).
+    **No:** Disabled (except mission rewards).
+
+    **Region:** All scraps in a region must be collected to be considered as 1 location (49 regions = 49 locations).
+
+    **Randomized:** All scraps are randomized.
     """
-    display_name = "Scraps amount as check"
-    range_start = 0
-    range_end = 5
-    default = 1
+    display_name = "Randomize Scraps"
+    option_no = 0
+    option_region = 1
+    option_all = 2
+    default = 2
     visibility = Visibility.all
 
 
@@ -44,35 +46,24 @@ class ScrapsTracker(DefaultOnToggle):
     visibility = Visibility.all
 
 
-class BlueprintFragments(Toggle):
+class BlueprintFragments(Choice):
     """
     Blueprint fragments must be received to access the 3 upgrades of the train.
-    These fragments are randomized:
+    The 'Repair' option on the blueprint is not affected.
+    These blueprints are randomized:
 
     Speed Upgrade ; Damage Upgrade ; Armor Upgrade
 
-    The 'Repair' option on the blueprint is not affected.
+    **No:** Disabled.
+
+    **Blueprints:** The 3 upgrades are locked until their blueprints (3 in total) are received.
+
+    **Fragments:** When a fragment is received (30 in total), apply the upgrade directly without paying scraps.
     """
     display_name = "Blueprint fragments"
-    visibility = Visibility.all
-
-
-class KeyFragments(Range):
-    """
-    Break keys into key fragments.
-    Collecting enough fragments crafts the associated key.
-
-    '1' means the option is disabled (1 fragment = 1 key).
-
-    If the 'Train access' option is disabled, there are at most:
-
-    **7x5 = 35 fragments**
-
-    **8x5 = 40 fragments otherwise**
-    """
-    display_name = "Key fragments"
-    range_start = 1
-    range_end = 5
+    option_no = 0
+    option_blueprints = 1
+    option_fragments = 2
     default = 1
     visibility = Visibility.all
 
@@ -80,7 +71,6 @@ class KeyFragments(Range):
 class TrainAccess(Toggle):
     """
     The key to access the train is randomized.
-    This option is affected by the "Key fragments" option if enabled.
     """
     display_name = "Train access"
     visibility = Visibility.all
@@ -169,13 +159,56 @@ class DerailedTrap(Range):
     visibility = Visibility.all
 
 
+class RailwaySwitch(Choice):
+    """
+    Randomize the railway switches.
+
+    **No:** Disabled.
+
+    **Once:** When a switch is received, enable all the railway switches.
+
+    **All:** The 7 railway switches are randomized.
+    """
+    display_name = "Railway switch"
+    option_no = 0
+    option_once = 1
+    option_all = 2
+    default = 2
+    visibility = Visibility.all
+
+
+class SecretGear(Toggle):
+    """
+    Add the secret gear implementation that was canceled in the base game.
+    The harrow in the North Mine cannot be opened without this gear.
+    """
+    display_name = "Secret gear"
+    visibility = Visibility.all
+
+
+class CharlesFrequency(Range):
+    """
+    Scale the encounter frequency against Charles.
+
+    0 means Charles never attacks.
+
+    1 is the default frequency.
+
+    3 is the higher threat.
+    """
+    display_name = "Charles' frequency"
+    range_start = 0
+    range_end = 3
+    default = 1
+    visibility = Visibility.all
+
+
 @dataclass
 class CCCharlesOptions(PerGameCommonOptions):
-    scraps_amount_as_check: ScrapsAmountAsCheck
+    randomize_scraps: RandomizeScraps
     scraps_detector: ScrapsDetector
     scraps_tracker: ScrapsTracker
     blueprint_fragments: BlueprintFragments
-    key_fragments: KeyFragments
     train_access: TrainAccess
     train_repair_cost: TrainRepairCost
     random_starting_weapon: RandomStartingWeapon
@@ -183,4 +216,7 @@ class CCCharlesOptions(PerGameCommonOptions):
     split_remote_explosives: SplitRemoteExplosives
     unscrap_trap: UnscrapTrap
     derailed_trap: DerailedTrap
+    railway_switch: RailwaySwitch
+    secret_gear: SecretGear
+    charles_frequency: CharlesFrequency
     death_link: DeathLink
