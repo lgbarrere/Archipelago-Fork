@@ -5,6 +5,7 @@ from Options import DefaultOnToggle, Range, Toggle, DeathLink, Choice, PerGameCo
 class RandomizeScraps(Choice):
     """
     Randomize the 636 scraps on the ground.
+    If the **Region** option is selected, 10 scraps are received when all scraps in a region are collected.
 
     **No:** Disabled (except mission rewards).
 
@@ -20,7 +21,7 @@ class RandomizeScraps(Choice):
     visibility = Visibility.all
 
 
-class ScrapsDetector(Choice):
+class ScrapsRadar(Choice):
     """
     Add a detector in the game, showing the closest scraps in a UI.
 
@@ -30,7 +31,7 @@ class ScrapsDetector(Choice):
 
     **Randomized:** The detector is randomized.
     """
-    display_name = "Scraps detector"
+    display_name = "Scraps radar"
     option_no = 0
     option_start = 1
     option_randomized = 2
@@ -49,16 +50,13 @@ class ScrapsTracker(DefaultOnToggle):
 class BlueprintFragments(Choice):
     """
     Blueprint fragments must be received to access the 3 upgrades of the train.
-    The 'Repair' option on the blueprint is not affected.
-    These blueprints are randomized:
-
-    Speed Upgrade ; Damage Upgrade ; Armor Upgrade
+    The 'Repair' section on the blueprint is not affected.
 
     **No:** Disabled.
 
-    **Blueprints:** The 3 upgrades are locked until their blueprints (3 in total) are received.
+    **Upgrades:** The 3 upgrades are locked until they are received.
 
-    **Fragments:** When a fragment is received (30 in total), apply the upgrade directly without paying scraps.
+    **Fragments:** When a fragment is received (3x10 in total), upgrade without paying scraps.
     """
     display_name = "Blueprint fragments"
     option_no = 0
@@ -206,7 +204,7 @@ class CharlesFrequency(Range):
 @dataclass
 class CCCharlesOptions(PerGameCommonOptions):
     randomize_scraps: RandomizeScraps
-    scraps_detector: ScrapsDetector
+    scraps_radar: ScrapsRadar
     scraps_tracker: ScrapsTracker
     blueprint_fragments: BlueprintFragments
     train_access: TrainAccess
