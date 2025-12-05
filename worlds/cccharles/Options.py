@@ -157,17 +157,17 @@ class DerailedTrap(Range):
     visibility = Visibility.all
 
 
-class RailwaySwitch(Choice):
+class TrackSwitches(Choice):
     """
-    Randomize the railway switches.
+    Randomize the track switches.
 
     **No:** Disabled.
 
-    **Once:** When a switch is received, enable all the railway switches.
+    **Once:** When a switch is received, enable all the track switches.
 
-    **All:** The 7 railway switches are randomized.
+    **All:** The 7 track switches are randomized.
     """
-    display_name = "Railway switch"
+    display_name = "Track switches"
     option_no = 0
     option_once = 1
     option_all = 2
@@ -214,7 +214,7 @@ class CCCharlesOptions(PerGameCommonOptions):
     split_remote_explosives: SplitRemoteExplosives
     unscrap_trap: UnscrapTrap
     derailed_trap: DerailedTrap
-    railway_switch: RailwaySwitch
+    track_switches: TrackSwitches
     secret_gear: SecretGear
     charles_frequency: CharlesFrequency
     death_link: DeathLink
