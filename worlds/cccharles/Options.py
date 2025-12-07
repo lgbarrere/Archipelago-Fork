@@ -184,23 +184,6 @@ class SecretGear(Toggle):
     visibility = Visibility.all
 
 
-class CharlesFrequency(Range):
-    """
-    Scale the encounter frequency against Charles.
-
-    0 means Charles never attacks.
-
-    1 is the default frequency.
-
-    3 is the higher threat.
-    """
-    display_name = "Charles' frequency"
-    range_start = 0
-    range_end = 3
-    default = 1
-    visibility = Visibility.all
-
-
 @dataclass
 class CCCharlesOptions(PerGameCommonOptions):
     randomize_scraps: RandomizeScraps
@@ -216,5 +199,4 @@ class CCCharlesOptions(PerGameCommonOptions):
     derailed_trap: DerailedTrap
     track_switches: TrackSwitches
     secret_gear: SecretGear
-    charles_frequency: CharlesFrequency
     death_link: DeathLink
