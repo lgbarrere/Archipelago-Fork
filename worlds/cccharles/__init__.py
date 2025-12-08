@@ -1,4 +1,4 @@
-from .Items import CCCharlesItem, unique_item_dict, full_item_list, item_groups
+from .Items import CCCharlesItem, unique_item_dict, item_groups
 from .Locations import location_table
 from .Options import CCCharlesOptions
 from .Rules import set_rules
@@ -156,12 +156,89 @@ class CCCharlesWorld(World):
                 classification = ItemClassification.progression
             case "Bug Spray":
                 classification = ItemClassification.progression
+            case "Track Switch Pack":
+                classification = ItemClassification.useful
+            case "Track Switch - Barn or Tutorial":
+                classification = ItemClassification.useful
+            case "Track Switch - Middle or Port":
+                classification = ItemClassification.useful
+            case "Track Switch - Haunted or East":
+                classification = ItemClassification.useful
+            case "Track Switch - North or Temple":
+                classification = ItemClassification.useful
+            case "Track Switch - Caravan or Cultists":
+                classification = ItemClassification.useful
+            case "Track Switch - Camp or Elevator":
+                classification = ItemClassification.useful
+            case "Track Switch - Ruin or Temple":
+                classification = ItemClassification.useful
             case _: # Should not occur
                 raise InvalidItemError("Unexpected case met: classification cannot be set for unknown item \"" + name + "\"")
 
         return CCCharlesItem(name, classification, item_id, self.player)
 
     def create_items(self) -> None:
+        # Main rule: the number of items and locations must be equal (692 locations)
+        number_of_scraps = 638 # max: 637 + 1 reward from Ronny
+
+        # Add items to full_item_list based on Player Options
+        full_item_list = []
+        if self.options.track_switches == "once":
+            full_item_list += ["Track Switch Pack"] * 1
+            number_of_scraps -= 1
+        elif self.options.track_switches == "all":
+            full_item_list += ["Track Switch - Barn or Tutorial"] * 1
+            full_item_list += ["Track Switch - Middle or Port"] * 1
+            full_item_list += ["Track Switch - Haunted or East"] * 1
+            full_item_list += ["Track Switch - North or Temple"] * 1
+            full_item_list += ["Track Switch - Caravan or Cultists"] * 1
+            full_item_list += ["Track Switch - Camp or Elevator"] * 1
+            full_item_list += ["Track Switch - Ruin or Temple"] * 1
+            number_of_scraps -= 7
+
+        full_item_list += ["Scraps"] * number_of_scraps
+        full_item_list += ["30 Scraps Reward"] * 3
+        full_item_list += ["25 Scraps Reward"] * 1
+        full_item_list += ["35 Scraps Reward"] * 2
+        full_item_list += ["40 Scraps Reward"] * 1
+        full_item_list += ["South Mine Key"] * 1
+        full_item_list += ["North Mine Key"] * 1
+        full_item_list += ["Mountain Ruin Key"] * 1
+        full_item_list += ["Barn Key"] * 1
+        full_item_list += ["Candice's Key"] * 1
+        full_item_list += ["Dead Fish"] * 1
+        full_item_list += ["Lockpicks"] * 1
+        full_item_list += ["Ancient Tablet"] * 1
+        full_item_list += ["Blue Box"] * 1
+        full_item_list += ["Page Drawing"] * 8
+        full_item_list += ["Journal"] * 1
+        full_item_list += ["Timed Dynamite"] * 1
+        full_item_list += ["Box of Rockets"] * 1
+        full_item_list += ["Breaker"] * 4
+        full_item_list += ["Broken Bob"] * 1
+        full_item_list += ["Employment Contracts"] * 1
+        full_item_list += ["Mob Camp Key"] * 1
+        full_item_list += ["Jar of Pickles"] * 1
+        full_item_list += ["Orange Paint Can"] * 1
+        full_item_list += ["Green Paint Can"] * 1
+        full_item_list += ["White Paint Can"] * 1
+        full_item_list += ["Pink Paint Can"] * 1
+        full_item_list += ["Grey Paint Can"] * 1
+        full_item_list += ["Blue Paint Can"] * 1
+        full_item_list += ["Black Paint Can"] * 1
+        full_item_list += ["Lime Paint Can"] * 1
+        full_item_list += ["Teal Paint Can"] * 1
+        full_item_list += ["Red Paint Can"] * 1
+        full_item_list += ["Purple Paint Can"] * 1
+        full_item_list += ["The Boomer"] * 1
+        full_item_list += ["Bob"] * 1
+        full_item_list += ["Green Egg"] * 1
+        full_item_list += ["Blue Egg"] * 1
+        full_item_list += ["Red Egg"] * 1
+        full_item_list += ["Remote Explosive x8"] * 1
+        full_item_list += ["Temple Key"] * 1
+        full_item_list += ["Bug Spray"] * 1
+
         self.multiworld.itempool += [self.create_item(item) for item in full_item_list]
 
     def set_rules(self) -> None:

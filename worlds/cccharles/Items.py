@@ -29,7 +29,15 @@ optional_items = {
     "Broken Bob": base_id + 20,
     "Employment Contracts": base_id + 21,
     "Mob Camp Key": base_id + 22,
-    "Jar of Pickles": base_id + 23
+    "Jar of Pickles": base_id + 23,
+    "Track Switch Pack": base_id + 44,
+    "Track Switch - Barn or Tutorial": base_id + 45,
+    "Track Switch - Middle or Port": base_id + 46,
+    "Track Switch - Haunted or East": base_id + 47,
+    "Track Switch - North or Temple": base_id + 48,
+    "Track Switch - Caravan or Cultists": base_id + 49,
+    "Track Switch - Camp or Elevator": base_id + 50,
+    "Track Switch - Ruin or Temple": base_id + 51
 }
 
 useless_items = {
@@ -81,6 +89,7 @@ item_groups = {
         "Scraps",
         "30 Scraps Reward",
         "25 Scraps Reward",
+        "35 Scraps Reward",
         "40 Scraps Reward"
     },
     "Dungeon Keys": {
@@ -114,54 +123,19 @@ item_groups = {
         "Green Egg",
         "Blue Egg",
         "Red Egg"
+    },
+    "Others": {
+        "Track Switch Pack",
+        "Track Switch - Barn or Tutorial",
+        "Track Switch - Middle or Port",
+        "Track Switch - Haunted or East",
+        "Track Switch - North or Temple",
+        "Track Switch - Caravan or Cultists",
+        "Track Switch - Camp or Elevator",
+        "Track Switch - Ruin or Temple"
     }
 }
 
 
 # All items excepted the duplications (no item amount)
 unique_item_dict = {**optional_items, **useless_items, **progression_items}
-
-# All 692 items to add to the item pool
-full_item_list = []
-full_item_list += ["Scraps"] * 638 # 637 + 1 as Scrap Reward (from Ronny)
-full_item_list += ["30 Scraps Reward"] * 3
-full_item_list += ["25 Scraps Reward"] * 1
-full_item_list += ["35 Scraps Reward"] * 2
-full_item_list += ["40 Scraps Reward"] * 1
-full_item_list += ["South Mine Key"] * 1
-full_item_list += ["North Mine Key"] * 1
-full_item_list += ["Mountain Ruin Key"] * 1
-full_item_list += ["Barn Key"] * 1
-full_item_list += ["Candice's Key"] * 1
-full_item_list += ["Dead Fish"] * 1
-full_item_list += ["Lockpicks"] * 1
-full_item_list += ["Ancient Tablet"] * 1
-full_item_list += ["Blue Box"] * 1
-full_item_list += ["Page Drawing"] * 8
-full_item_list += ["Journal"] * 1
-full_item_list += ["Timed Dynamite"] * 1
-full_item_list += ["Box of Rockets"] * 1
-full_item_list += ["Breaker"] * 4
-full_item_list += ["Broken Bob"] * 1
-full_item_list += ["Employment Contracts"] * 1
-full_item_list += ["Mob Camp Key"] * 1
-full_item_list += ["Jar of Pickles"] * 1
-full_item_list += ["Orange Paint Can"] * 1
-full_item_list += ["Green Paint Can"] * 1
-full_item_list += ["White Paint Can"] * 1
-full_item_list += ["Pink Paint Can"] * 1
-full_item_list += ["Grey Paint Can"] * 1
-full_item_list += ["Blue Paint Can"] * 1
-full_item_list += ["Black Paint Can"] * 1
-full_item_list += ["Lime Paint Can"] * 1
-full_item_list += ["Teal Paint Can"] * 1
-full_item_list += ["Red Paint Can"] * 1
-full_item_list += ["Purple Paint Can"] * 1
-full_item_list += ["The Boomer"] * 1
-full_item_list += ["Bob"] * 1
-full_item_list += ["Green Egg"] * 1
-full_item_list += ["Blue Egg"] * 1
-full_item_list += ["Red Egg"] * 1
-full_item_list += ["Remote Explosive x8"] * 1
-full_item_list += ["Temple Key"] * 1
-full_item_list += ["Bug Spray"] * 1
