@@ -251,6 +251,7 @@ class CCCharlesWorld(World):
     def fill_slot_data(self) -> dict[str, Any]:
         slot_data = {
             # See world_version in archipelago.json: used to check mod compliance with apworld
-            "world_version": self.world_version.as_simple_string()
+            "world_version": self.world_version.as_simple_string(),
+            "DeathLink": self.options.death_link.value
         }
         return slot_data

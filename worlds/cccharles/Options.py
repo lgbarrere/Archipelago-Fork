@@ -26,3 +26,4 @@ class TrackSwitches(Choice):
 class CCCharlesOptions(PerGameCommonOptions):
     start_inventory_from_pool: StartInventoryPool
     track_switches: TrackSwitches
+    death_link: DeathLink

@@ -31,13 +31,13 @@ optional_items = {
     "Mob Camp Key": base_id + 22,
     "Jar of Pickles": base_id + 23,
     "Track Switch Pack": base_id + 44,
-    "Track Switch - Barn or Tutorial": base_id + 45,
-    "Track Switch - Middle or Port": base_id + 46,
-    "Track Switch - Haunted or East": base_id + 47,
-    "Track Switch - North or Temple": base_id + 48,
-    "Track Switch - Caravan or Cultists": base_id + 49,
-    "Track Switch - Camp or Elevator": base_id + 50,
-    "Track Switch - Ruin or Temple": base_id + 51
+    "Track Switch - Barn or Tutorial": base_id + 45, # RailDirectionSwitcher9_26
+    "Track Switch - Middle or Port": base_id + 46, # RailDirectionSwitcher7_20
+    "Track Switch - Haunted or East": base_id + 47, # RailDirectionSwitcher6_17
+    "Track Switch - North or Temple": base_id + 48, # RailDirectionSwitcher5_14
+    "Track Switch - Caravan or Cultists": base_id + 49, # RailDirectionSwitcher2_5
+    "Track Switch - Camp or Elevator": base_id + 50, # RailDirectionSwitcher3_8
+    "Track Switch - Ruin or Temple": base_id + 51 # RailDirectionSwitcher4_11
 }
 
 useless_items = {
