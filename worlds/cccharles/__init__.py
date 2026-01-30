@@ -173,6 +173,76 @@ class CCCharlesWorld(World):
                 classification = ItemClassification.useful
             case "Track Switch - Ruin or Temple":
                 classification = ItemClassification.useful
+            case "Fogbane Relic Pack":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Mine Shaft":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Junkyard Area":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Junkyard Shed":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - South House":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Military Base":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - South Mine Outside":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Middle Station":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Canyon":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Watchtower":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Haunted House":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Santiago House":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Port":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Doll Woods":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - East House":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Rocket Grounds":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Workshop":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - East Tower":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Lighthouse":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - North Mine Outside":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Wood Bridge":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Museum":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Barbed Shelter":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - West Beach":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Church":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - West Cottage":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Trailer Cabin":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Towers":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - North Beach":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Mob Camp":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Mine Elevator Exit":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Mountain Ruin Outside":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Temple":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Pickle Val":
+                classification = ItemClassification.progression
+            case "Fogbane Relic - Morse Bunker":
+                classification = ItemClassification.progression
             case _: # Should not occur
                 raise InvalidItemError("Unexpected case met: classification cannot be set for unknown item \"" + name + "\"")
 
@@ -196,6 +266,45 @@ class CCCharlesWorld(World):
             full_item_list += ["Track Switch - Camp or Elevator"] * 1
             full_item_list += ["Track Switch - Ruin or Temple"] * 1
             number_of_scraps -= 7
+        if self.options.cursed_fogs == "once":
+            full_item_list += ["Fogbane Relic Pack"] * 1
+            number_of_scraps -= 1
+        elif self.options.cursed_fogs == "all":
+            full_item_list += ["Fogbane Relic - Mine Shaft"] * 1
+            full_item_list += ["Fogbane Relic - Junkyard Area"] * 1
+            full_item_list += ["Fogbane Relic - Junkyard Shed"] * 1
+            full_item_list += ["Fogbane Relic - South House"] * 1
+            full_item_list += ["Fogbane Relic - Military Base"] * 1
+            full_item_list += ["Fogbane Relic - South Mine Outside"] * 1
+            full_item_list += ["Fogbane Relic - Middle Station"] * 1
+            full_item_list += ["Fogbane Relic - Canyon"] * 1
+            full_item_list += ["Fogbane Relic - Watchtower"] * 1
+            full_item_list += ["Fogbane Relic - Haunted House"] * 1
+            full_item_list += ["Fogbane Relic - Santiago House"] * 1
+            full_item_list += ["Fogbane Relic - Port"] * 1
+            full_item_list += ["Fogbane Relic - Doll Woods"] * 1
+            full_item_list += ["Fogbane Relic - East House"] * 1
+            full_item_list += ["Fogbane Relic - Rocket Grounds"] * 1
+            full_item_list += ["Fogbane Relic - Workshop"] * 1
+            full_item_list += ["Fogbane Relic - East Tower"] * 1
+            full_item_list += ["Fogbane Relic - Lighthouse"] * 1
+            full_item_list += ["Fogbane Relic - North Mine Outside"] * 1
+            full_item_list += ["Fogbane Relic - Wood Bridge"] * 1
+            full_item_list += ["Fogbane Relic - Museum"] * 1
+            full_item_list += ["Fogbane Relic - Barbed Shelter"] * 1
+            full_item_list += ["Fogbane Relic - West Beach"] * 1
+            full_item_list += ["Fogbane Relic - Church"] * 1
+            full_item_list += ["Fogbane Relic - West Cottage"] * 1
+            full_item_list += ["Fogbane Relic - Trailer Cabin"] * 1
+            full_item_list += ["Fogbane Relic - Towers"] * 1
+            full_item_list += ["Fogbane Relic - North Beach"] * 1
+            full_item_list += ["Fogbane Relic - Mob Camp"] * 1
+            full_item_list += ["Fogbane Relic - Mine Elevator Exit"] * 1
+            full_item_list += ["Fogbane Relic - Mountain Ruin Outside"] * 1
+            full_item_list += ["Fogbane Relic - Temple"] * 1
+            full_item_list += ["Fogbane Relic - Pickle Val"] * 1
+            full_item_list += ["Fogbane Relic - Morse Bunker"] * 1
+            number_of_scraps -= 34
 
         full_item_list += ["Scraps"] * number_of_scraps
         full_item_list += ["30 Scraps Reward"] * 3
@@ -250,8 +359,9 @@ class CCCharlesWorld(World):
 
     def fill_slot_data(self) -> dict[str, Any]:
         slot_data = {
-            # See world_version in archipelago.json: used to check mod compliance with apworld
-            "world_version": self.world_version.as_simple_string(),
+            "world_version": self.world_version.as_simple_string(), # See archipelago.json: check mod<->apworld compliance
+            "TrackSwitches": self.options.track_switches.value,
+            "CursedFogs": self.options.cursed_fogs.value,
             "DeathLink": self.options.death_link.value
         }
         return slot_data

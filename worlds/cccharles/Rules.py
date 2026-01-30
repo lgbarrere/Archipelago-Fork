@@ -206,10 +206,79 @@ def set_rules(world: MultiWorld, options: CCCharlesOptions, player: int) -> None
     set_rule(world.get_location("Morse Bunker Chest Scraps - 5", player),
         lambda state: state.has("Lockpicks", player))
 
+    # The Cursed Fogs (option)
+    if options.cursed_fogs != "no":
+        fogbane_relic_pack = "Fogbane Relic Pack"
+        set_rule(world.get_entrance("Mine Shaft Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Mine Shaft"), player))
+        set_rule(world.get_entrance("Junkyard Area Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Junkyard Area"), player))
+        set_rule(world.get_entrance("Junkyard Shed Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Junkyard Shed"), player))
+        set_rule(world.get_entrance("South House Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - South House"), player))
+        set_rule(world.get_entrance("Military Base Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Military Base"), player))
+        set_rule(world.get_entrance("South Mine Outside Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - South Mine Outside"), player))
+        set_rule(world.get_entrance("Middle Station Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Middle Station"), player))
+        set_rule(world.get_entrance("Canyon Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Canyon"), player))
+        set_rule(world.get_entrance("Watchtower Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Watchtower"), player))
+        set_rule(world.get_entrance("Haunted House Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Haunted House"), player))
+        set_rule(world.get_entrance("Santiago House Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Santiago House"), player))
+        set_rule(world.get_entrance("Port Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Port"), player))
+        set_rule(world.get_entrance("Doll Woods Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Doll Woods"), player))
+        set_rule(world.get_entrance("East House Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - East House"), player))
+        set_rule(world.get_entrance("Rocket Grounds Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Rocket Grounds"), player))
+        set_rule(world.get_entrance("Workshop Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Workshop"), player))
+        set_rule(world.get_entrance("East Tower Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - East Tower"), player))
+        set_rule(world.get_entrance("Lighthouse Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Lighthouse"), player))
+        set_rule(world.get_entrance("North Mine Outside Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - North Mine Outside"), player))
+        set_rule(world.get_entrance("Wood Bridge Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Wood Bridge"), player))
+        set_rule(world.get_entrance("Museum Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Museum"), player))
+        set_rule(world.get_entrance("Barbed Shelter Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Barbed Shelter"), player))
+        set_rule(world.get_entrance("West Beach Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - West Beach"), player))
+        set_rule(world.get_entrance("Church Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Church"), player))
+        set_rule(world.get_entrance("West Cottage Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - West Cottage"), player))
+        set_rule(world.get_entrance("Trailer Cabin Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Trailer Cabin"), player))
+        set_rule(world.get_entrance("Towers Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Towers"), player))
+        set_rule(world.get_entrance("North Beach Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - North Beach"), player))
+        set_rule(world.get_entrance("Mob Camp Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Mob Camp"), player))
+        set_rule(world.get_entrance("Mine Elevator Exit Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Mine Elevator Exit"), player))
+        set_rule(world.get_entrance("Mountain Ruin Outside Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Mountain Ruin Outside"), player))
+        set_rule(world.get_entrance("Temple Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Temple"), player))
+        set_rule(world.get_entrance("Pickle Val Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Pickle Val"), player))
+        set_rule(world.get_entrance("Morse Bunker Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Morse Bunker"), player))
+
     # Add rules to reach the "Go mode"
     set_rule(world.get_location("Final Boss", player),
-        lambda state: state.has("Temple Key", player)
-            and state.has("Green Egg", player)
-            and state.has("Blue Egg", player)
-            and state.has("Red Egg", player))
+        lambda state: state.has_all(("Temple Key", "Green Egg", "Blue Egg", "Red Egg"), player))
     world.completion_condition[player] = lambda state: state.has("Victory", player)
