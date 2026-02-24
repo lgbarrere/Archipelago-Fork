@@ -207,8 +207,8 @@ def set_rules(world: MultiWorld, options: CCCharlesOptions, player: int) -> None
         lambda state: state.has("Lockpicks", player))
 
     # The Cursed Fogs (option)
+    fogbane_relic_pack = "Fogbane Relic Pack"
     if options.cursed_fogs != "no":
-        fogbane_relic_pack = "Fogbane Relic Pack"
         set_rule(world.get_entrance("Mine Shaft Fogless", player),
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Mine Shaft"), player))
         set_rule(world.get_entrance("Junkyard Area Fogless", player),
@@ -279,6 +279,12 @@ def set_rules(world: MultiWorld, options: CCCharlesOptions, player: int) -> None
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Morse Bunker"), player))
 
     # Add rules to reach the "Go mode"
+    required_items = ["Temple Key", "Green Egg", "Blue Egg", "Red Egg"]
+    if options.cursed_fogs == "once":
+        required_items.append(fogbane_relic_pack)
+    elif options.cursed_fogs == "all":
+        required_items.append("Fogbane Relic - Temple") 
+
     set_rule(world.get_location("Final Boss", player),
-        lambda state: state.has_all(("Temple Key", "Green Egg", "Blue Egg", "Red Egg"), player))
+        lambda state: state.has_all(required_items, player))
     world.completion_condition[player] = lambda state: state.has("Victory", player)
