@@ -223,8 +223,8 @@ loc_canyon = {
     "Canyon Scraps - East Top Mountain": base_id + 1167, # ItemPickup145_14 Canyon_Main (X=24752.658 Y=7959.624 Z=14363.087)
     "Canyon Scraps - South Top Mountain": base_id + 1168, # ItemPickup141_2 Canyon_Main (X=20181.992 Y=13816.017 Z=14897.407)
     "Canyon Scraps - North Above Overturned Railcar": base_id + 1169, # ItemPickup151_32 Canyon_Main (X=23172.160 Y=2842.120 Z=12954.566)
-    "Canyon Scraps - East On Lonely Rocks": base_id + 1170, # ItemPickup152_35 Canyon_Main (X=22307.621 Y=-1180.840 Z=12451.548)
-    "Canyon Scraps - North On Lonely Rocks": base_id + 1171, # ItemPickup153_38 Canyon_Main (X=28473.596 Y=6741.842 Z=13314.166)
+    "Canyon Scraps - North On Lonely Rocks": base_id + 1170, # ItemPickup152_35 Canyon_Main (X=22307.621 Y=-1180.840 Z=12451.548)
+    "Canyon Scraps - East On Lonely Rocks": base_id + 1171, # ItemPickup153_38 Canyon_Main (X=28473.596 Y=6741.842 Z=13314.166)
     "Canyon Blue Box": base_id + 1172 # Canyon_BlueBoxPickup CanyonCamp_Details (X=20338.525 Y=4989.111 Z=12323.649)
 }
 
