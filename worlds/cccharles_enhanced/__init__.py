@@ -49,7 +49,7 @@ class CCCharlesWorld(World):
     Upgrading the train requires leaving the train to gather resources with the threat of encountering the monster.
     """
 
-    game = "Choo-Choo Charles"
+    game = "Choo-Choo Charles - Enhanced"
 
     web = CCCharlesWeb()
 
@@ -159,7 +159,7 @@ class CCCharlesWorld(World):
                 classification = ItemClassification.progression
             case "Track Switch Pack":
                 classification = ItemClassification.useful
-            case "Track Switch - Barn or Tutorial":
+            case "Track Switch - Barn or Junkyard":
                 classification = ItemClassification.useful
             case "Track Switch - Middle or Port":
                 classification = ItemClassification.useful
@@ -195,25 +195,25 @@ class CCCharlesWorld(World):
                 classification = ItemClassification.progression
             case "Fogbane Relic - Haunted House":
                 classification = ItemClassification.progression
-            case "Fogbane Relic - Santiago House":
+            case "Fogbane Relic - Santiago's House":
                 classification = ItemClassification.progression
             case "Fogbane Relic - Port":
                 classification = ItemClassification.progression
             case "Fogbane Relic - Doll Woods":
                 classification = ItemClassification.progression
-            case "Fogbane Relic - East House":
+            case "Fogbane Relic - Cliff House":
                 classification = ItemClassification.progression
             case "Fogbane Relic - Rocket Grounds":
                 classification = ItemClassification.progression
             case "Fogbane Relic - Workshop":
                 classification = ItemClassification.progression
-            case "Fogbane Relic - East Tower":
+            case "Fogbane Relic - Tower Near Workshop":
                 classification = ItemClassification.progression
             case "Fogbane Relic - Lighthouse":
                 classification = ItemClassification.progression
             case "Fogbane Relic - North Mine Outside":
                 classification = ItemClassification.progression
-            case "Fogbane Relic - Wood Bridge":
+            case "Fogbane Relic - Wooden Bridge":
                 classification = ItemClassification.progression
             case "Fogbane Relic - Museum":
                 classification = ItemClassification.progression
@@ -227,7 +227,7 @@ class CCCharlesWorld(World):
                 classification = ItemClassification.progression
             case "Fogbane Relic - Trailer Cabin":
                 classification = ItemClassification.progression
-            case "Fogbane Relic - Towers":
+            case "Fogbane Relic - Tall Towers":
                 classification = ItemClassification.progression
             case "Fogbane Relic - North Beach":
                 classification = ItemClassification.progression
@@ -239,7 +239,7 @@ class CCCharlesWorld(World):
                 classification = ItemClassification.progression
             case "Fogbane Relic - Temple":
                 classification = ItemClassification.progression
-            case "Fogbane Relic - Pickle Val":
+            case "Fogbane Relic - Pickle Valley":
                 classification = ItemClassification.progression
             case "Fogbane Relic - Morse Bunker":
                 classification = ItemClassification.progression
@@ -272,7 +272,7 @@ class CCCharlesWorld(World):
             full_item_list += ["Track Switch Pack"] * 1
             number_of_scraps -= 1
         elif self.options.track_switches == "all":
-            full_item_list += ["Track Switch - Barn or Tutorial"] * 1
+            full_item_list += ["Track Switch - Barn or Junkyard"] * 1
             full_item_list += ["Track Switch - Middle or Port"] * 1
             full_item_list += ["Track Switch - Haunted or East"] * 1
             full_item_list += ["Track Switch - North or Temple"] * 1
@@ -294,29 +294,29 @@ class CCCharlesWorld(World):
             full_item_list += ["Fogbane Relic - Canyon"] * 1
             full_item_list += ["Fogbane Relic - Watchtower"] * 1
             full_item_list += ["Fogbane Relic - Haunted House"] * 1
-            full_item_list += ["Fogbane Relic - Santiago House"] * 1
+            full_item_list += ["Fogbane Relic - Santiago's House"] * 1
             full_item_list += ["Fogbane Relic - Port"] * 1
             full_item_list += ["Fogbane Relic - Doll Woods"] * 1
-            full_item_list += ["Fogbane Relic - East House"] * 1
+            full_item_list += ["Fogbane Relic - Cliff House"] * 1
             full_item_list += ["Fogbane Relic - Rocket Grounds"] * 1
             full_item_list += ["Fogbane Relic - Workshop"] * 1
-            full_item_list += ["Fogbane Relic - East Tower"] * 1
+            full_item_list += ["Fogbane Relic - Tower Near Workshop"] * 1
             full_item_list += ["Fogbane Relic - Lighthouse"] * 1
             full_item_list += ["Fogbane Relic - North Mine Outside"] * 1
-            full_item_list += ["Fogbane Relic - Wood Bridge"] * 1
+            full_item_list += ["Fogbane Relic - Wooden Bridge"] * 1
             full_item_list += ["Fogbane Relic - Museum"] * 1
             full_item_list += ["Fogbane Relic - Barbed Shelter"] * 1
             full_item_list += ["Fogbane Relic - West Beach"] * 1
             full_item_list += ["Fogbane Relic - Church"] * 1
             full_item_list += ["Fogbane Relic - West Cottage"] * 1
             full_item_list += ["Fogbane Relic - Trailer Cabin"] * 1
-            full_item_list += ["Fogbane Relic - Towers"] * 1
+            full_item_list += ["Fogbane Relic - Tall Towers"] * 1
             full_item_list += ["Fogbane Relic - North Beach"] * 1
             full_item_list += ["Fogbane Relic - Mob Camp"] * 1
             full_item_list += ["Fogbane Relic - Mine Elevator Exit"] * 1
             full_item_list += ["Fogbane Relic - Mountain Ruin Outside"] * 1
             full_item_list += ["Fogbane Relic - Temple"] * 1
-            full_item_list += ["Fogbane Relic - Pickle Val"] * 1
+            full_item_list += ["Fogbane Relic - Pickle Valley"] * 1
             full_item_list += ["Fogbane Relic - Morse Bunker"] * 1
             number_of_scraps -= 34
         if self.options.speed_upgrade == "unlock":

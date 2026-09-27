@@ -2,4 +2,4 @@ from test.bases import WorldTestBase
 
 
 class CCCharlesTestBase(WorldTestBase):
-    game = "Choo-Choo Charles"
+    game = "Choo-Choo Charles - Enhanced"

@@ -10,80 +10,80 @@ def set_rules(multiworld: MultiWorld, options: CCCharlesOptions, player: int) ->
         lambda state: state.has("Barn Key", player))
 
     # Candice
-    set_rule(multiworld.get_entrance("Tutorial House Door", player),
+    set_rule(multiworld.get_entrance("Candice's House Door", player),
         lambda state: state.has("Candice's Key", player))
 
     # Lizbeth Murkwater
-    set_rule(multiworld.get_location("Swamp Lizbeth Murkwater Mission End", player),
+    set_rule(multiworld.get_location("Swamp, Lizbeth Murkwater - Mission End", player),
         lambda state: state.has("Dead Fish", player))
 
     # Daryl
-    set_rule(multiworld.get_location("Junkyard Area Chest Ancient Tablet", player),
+    set_rule(multiworld.get_location("Junkyard Area, Chest - Ancient Tablet", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Junkyard Area Daryl Mission End", player),
+    set_rule(multiworld.get_location("Junkyard Area, Daryl - Mission End", player),
         lambda state: state.has("Ancient Tablet", player))
 
     # South House
-    set_rule(multiworld.get_location("South House Chest Scraps - 1", player),
+    set_rule(multiworld.get_location("South House, Chest Scraps - 1", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("South House Chest Scraps - 2", player),
+    set_rule(multiworld.get_location("South House, Chest Scraps - 2", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("South House Chest Scraps - 3", player),
+    set_rule(multiworld.get_location("South House, Chest Scraps - 3", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("South House Chest Scraps - 4", player),
+    set_rule(multiworld.get_location("South House, Chest Scraps - 4", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("South House Chest Scraps - 5", player),
+    set_rule(multiworld.get_location("South House, Chest Scraps - 5", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("South House Chest Scraps - 6", player),
+    set_rule(multiworld.get_location("South House, Chest Scraps - 6", player),
         lambda state: state.has("Lockpicks", player))
 
     # South Mine
     set_rule(multiworld.get_entrance("South Mine Gate", player),
         lambda state: state.has("South Mine Key", player))
 
-    set_rule(multiworld.get_location("South Mine Inside Green Paint Can", player),
+    set_rule(multiworld.get_location("South Mine Inside, Green Paint Can", player),
         lambda state: state.has("Lockpicks", player))
 
     # Theodore
-    set_rule(multiworld.get_location("Middle Station Theodore Mission End", player),
+    set_rule(multiworld.get_location("Middle Station, Theodore - Mission End", player),
         lambda state: state.has("Blue Box", player))
 
     # Watchtower
-    set_rule(multiworld.get_location("Watchtower Pink Paint Can", player),
+    set_rule(multiworld.get_location("Watchtower, Pink Paint Can", player),
         lambda state: state.has("Lockpicks", player))
 
     # Sasha
-    set_rule(multiworld.get_location("Haunted House Sasha Mission End", player),
+    set_rule(multiworld.get_location("Haunted House, Sasha - Mission End", player),
         lambda state: state.has("Page Drawing", player, 8))
 
     # Santiago
-    set_rule(multiworld.get_location("Port Santiago Mission End", player),
+    set_rule(multiworld.get_location("Port, Santiago - Mission End", player),
         lambda state: state.has("Journal", player))
 
     # Trench House
-    set_rule(multiworld.get_location("Trench House Chest Scraps - 1", player),
+    set_rule(multiworld.get_location("Trench House, Chest Scraps - 1", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Trench House Chest Scraps - 2", player),
+    set_rule(multiworld.get_location("Trench House, Chest Scraps - 2", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Trench House Chest Scraps - 3", player),
+    set_rule(multiworld.get_location("Trench House, Chest Scraps - 3", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Trench House Chest Scraps - 4", player),
+    set_rule(multiworld.get_location("Trench House, Chest Scraps - 4", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Trench House Chest Scraps - 5", player),
+    set_rule(multiworld.get_location("Trench House, Chest Scraps - 5", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Trench House Chest Scraps - 6", player),
+    set_rule(multiworld.get_location("Trench House, Chest Scraps - 6", player),
         lambda state: state.has("Lockpicks", player))
 
-    # East House
-    set_rule(multiworld.get_location("East House Chest Scraps - 1", player),
+    # Cliff House
+    set_rule(multiworld.get_location("Cliff House, Chest Scraps - 1", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("East House Chest Scraps - 2", player),
+    set_rule(multiworld.get_location("Cliff House, Chest Scraps - 2", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("East House Chest Scraps - 3", player),
+    set_rule(multiworld.get_location("Cliff House, Chest Scraps - 3", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("East House Chest Scraps - 4", player),
+    set_rule(multiworld.get_location("Cliff House, Chest Scraps - 4", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("East House Chest Scraps - 5", player),
+    set_rule(multiworld.get_location("Cliff House, Chest Scraps - 5", player),
         lambda state: state.has("Lockpicks", player))
 
     # Rocket Bunker
@@ -91,119 +91,119 @@ def set_rules(multiworld: MultiWorld, options: CCCharlesOptions, player: int) ->
         lambda state: state.has("Timed Dynamite", player))
 
     # John Smith
-    set_rule(multiworld.get_location("Workshop John Smith Mission End", player),
+    set_rule(multiworld.get_location("Workshop, John Smith - Mission End", player),
         lambda state: state.has("Box of Rockets", player))
 
     # Claire
-    set_rule(multiworld.get_location("Lighthouse Claire Mission End", player),
+    set_rule(multiworld.get_location("Lighthouse, Claire - Mission End", player),
         lambda state: state.has("Breaker", player, 4))
 
     # North Mine
     set_rule(multiworld.get_entrance("North Mine Gate", player),
         lambda state: state.has("North Mine Key", player))
 
-    set_rule(multiworld.get_location("North Mine Inside Blue Paint Can", player),
+    set_rule(multiworld.get_location("North Mine Inside, Blue Paint Can", player),
         lambda state: state.has("Lockpicks", player))
 
     # Paul
-    set_rule(multiworld.get_location("Museum Paul Mission End", player),
+    set_rule(multiworld.get_location("Museum, Paul - Mission End", player),
         lambda state: state.has("Remote Explosive x8", player))
         # lambda state: state.has("Remote Explosive", player, 8)) # TODO: Add an option to split remote explosives
 
     # West Beach
-    set_rule(multiworld.get_location("West Beach Chest Scraps - 1", player),
+    set_rule(multiworld.get_location("West Beach, Chest Scraps - 1", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("West Beach Chest Scraps - 2", player),
+    set_rule(multiworld.get_location("West Beach, Chest Scraps - 2", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("West Beach Chest Scraps - 3", player),
+    set_rule(multiworld.get_location("West Beach, Chest Scraps - 3", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("West Beach Chest Scraps - 4", player),
+    set_rule(multiworld.get_location("West Beach, Chest Scraps - 4", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("West Beach Chest Scraps - 5", player),
+    set_rule(multiworld.get_location("West Beach, Chest Scraps - 5", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("West Beach Chest Scraps - 6", player),
+    set_rule(multiworld.get_location("West Beach, Chest Scraps - 6", player),
         lambda state: state.has("Lockpicks", player))
 
     # Caravan
-    set_rule(multiworld.get_location("Caravan Chest Scraps - 1", player),
+    set_rule(multiworld.get_location("Caravan, Chest Scraps - 1", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Caravan Chest Scraps - 2", player),
+    set_rule(multiworld.get_location("Caravan, Chest Scraps - 2", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Caravan Chest Scraps - 3", player),
+    set_rule(multiworld.get_location("Caravan, Chest Scraps - 3", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Caravan Chest Scraps - 4", player),
+    set_rule(multiworld.get_location("Caravan, Chest Scraps - 4", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Caravan Chest Scraps - 5", player),
+    set_rule(multiworld.get_location("Caravan, Chest Scraps - 5", player),
         lambda state: state.has("Lockpicks", player))
 
     # Ronny
-    set_rule(multiworld.get_location("Towers Ronny Mission End", player),
+    set_rule(multiworld.get_location("Tall Towers, Ronny - Mission End", player),
         lambda state: state.has("Employment Contracts", player))
 
     # North Beach
-    set_rule(multiworld.get_location("North Beach Chest Scraps - 1", player),
+    set_rule(multiworld.get_location("North Beach, Chest Scraps - 1", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("North Beach Chest Scraps - 2", player),
+    set_rule(multiworld.get_location("North Beach, Chest Scraps - 2", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("North Beach Chest Scraps - 3", player),
+    set_rule(multiworld.get_location("North Beach, Chest Scraps - 3", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("North Beach Chest Scraps - 4", player),
+    set_rule(multiworld.get_location("North Beach, Chest Scraps - 4", player),
         lambda state: state.has("Lockpicks", player))
 
     # Mine Shaft
-    set_rule(multiworld.get_location("Mine Shaft Chest Scraps - 1", player),
+    set_rule(multiworld.get_location("Mine Shaft, Chest Scraps - 1", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Mine Shaft Chest Scraps - 2", player),
+    set_rule(multiworld.get_location("Mine Shaft, Chest Scraps - 2", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Mine Shaft Chest Scraps - 3", player),
+    set_rule(multiworld.get_location("Mine Shaft, Chest Scraps - 3", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Mine Shaft Chest Scraps - 4", player),
+    set_rule(multiworld.get_location("Mine Shaft, Chest Scraps - 4", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Mine Shaft Chest Scraps - 5", player),
+    set_rule(multiworld.get_location("Mine Shaft, Chest Scraps - 5", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Mine Shaft Chest Scraps - 6", player),
+    set_rule(multiworld.get_location("Mine Shaft, Chest Scraps - 6", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Mine Shaft Chest Scraps - 7", player),
+    set_rule(multiworld.get_location("Mine Shaft, Chest Scraps - 7", player),
         lambda state: state.has("Lockpicks", player))
 
     # Mob Camp
     set_rule(multiworld.get_entrance("Mob Camp Locked Door", player),
         lambda state: state.has("Mob Camp Key", player))
 
-    set_rule(multiworld.get_location("Mob Camp Locked Room Stolen Bob", player),
+    set_rule(multiworld.get_location("Mob Camp Locked Room, Stolen Bob", player),
         lambda state: state.has("Broken Bob", player))
 
     # Mountain Ruin
     set_rule(multiworld.get_entrance("Mountain Ruin Gate", player),
         lambda state: state.has("Mountain Ruin Key", player))
 
-    set_rule(multiworld.get_location("Mountain Ruin Inside Red Paint Can", player),
+    set_rule(multiworld.get_location("Mountain Ruin Inside, Red Paint Can", player),
         lambda state: state.has("Lockpicks", player))
 
     # Temple
-    set_rule(multiworld.get_location("Temple Chest Scraps - 1", player),
+    set_rule(multiworld.get_location("Temple, Chest Scraps - 1", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Temple Chest Scraps - 2", player),
+    set_rule(multiworld.get_location("Temple, Chest Scraps - 2", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Temple Chest Scraps - 3", player),
+    set_rule(multiworld.get_location("Temple, Chest Scraps - 3", player),
         lambda state: state.has("Lockpicks", player))
 
     # Pickle Lady
-    set_rule(multiworld.get_location("Pickle Val Jar of Pickles", player),
+    set_rule(multiworld.get_location("Pickle Valley, Jar of Pickles", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Pickle Val Pickle Lady Mission End", player),
+    set_rule(multiworld.get_location("Pickle Valley, Pickle Lady - Mission End", player),
         lambda state: state.has("Jar of Pickles", player))
 
     # Morse Bunker
-    set_rule(multiworld.get_location("Morse Bunker Chest Scraps - 1", player),
+    set_rule(multiworld.get_location("Morse Bunker, Chest Scraps - 1", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Morse Bunker Chest Scraps - 2", player),
+    set_rule(multiworld.get_location("Morse Bunker, Chest Scraps - 2", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Morse Bunker Chest Scraps - 3", player),
+    set_rule(multiworld.get_location("Morse Bunker, Chest Scraps - 3", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Morse Bunker Chest Scraps - 4", player),
+    set_rule(multiworld.get_location("Morse Bunker, Chest Scraps - 4", player),
         lambda state: state.has("Lockpicks", player))
-    set_rule(multiworld.get_location("Morse Bunker Chest Scraps - 5", player),
+    set_rule(multiworld.get_location("Morse Bunker, Chest Scraps - 5", player),
         lambda state: state.has("Lockpicks", player))
 
     # The Cursed Fogs (option)
@@ -229,26 +229,26 @@ def set_rules(multiworld: MultiWorld, options: CCCharlesOptions, player: int) ->
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Watchtower"), player))
         set_rule(multiworld.get_entrance("Haunted House Fogless", player),
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Haunted House"), player))
-        set_rule(multiworld.get_entrance("Santiago House Fogless", player),
-            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Santiago House"), player))
+        set_rule(multiworld.get_entrance("Santiago's House Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Santiago's House"), player))
         set_rule(multiworld.get_entrance("Port Fogless", player),
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Port"), player))
         set_rule(multiworld.get_entrance("Doll Woods Fogless", player),
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Doll Woods"), player))
-        set_rule(multiworld.get_entrance("East House Fogless", player),
-            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - East House"), player))
+        set_rule(multiworld.get_entrance("Cliff House Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Cliff House"), player))
         set_rule(multiworld.get_entrance("Rocket Grounds Fogless", player),
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Rocket Grounds"), player))
         set_rule(multiworld.get_entrance("Workshop Fogless", player),
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Workshop"), player))
-        set_rule(multiworld.get_entrance("East Tower Fogless", player),
-            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - East Tower"), player))
+        set_rule(multiworld.get_entrance("Tower Near Workshop Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Tower Near Workshop"), player))
         set_rule(multiworld.get_entrance("Lighthouse Fogless", player),
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Lighthouse"), player))
         set_rule(multiworld.get_entrance("North Mine Outside Fogless", player),
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - North Mine Outside"), player))
-        set_rule(multiworld.get_entrance("Wood Bridge Fogless", player),
-            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Wood Bridge"), player))
+        set_rule(multiworld.get_entrance("Wooden Bridge Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Wooden Bridge"), player))
         set_rule(multiworld.get_entrance("Museum Fogless", player),
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Museum"), player))
         set_rule(multiworld.get_entrance("Barbed Shelter Fogless", player),
@@ -261,8 +261,8 @@ def set_rules(multiworld: MultiWorld, options: CCCharlesOptions, player: int) ->
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - West Cottage"), player))
         set_rule(multiworld.get_entrance("Trailer Cabin Fogless", player),
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Trailer Cabin"), player))
-        set_rule(multiworld.get_entrance("Towers Fogless", player),
-            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Towers"), player))
+        set_rule(multiworld.get_entrance("Tall Towers Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Tall Towers"), player))
         set_rule(multiworld.get_entrance("North Beach Fogless", player),
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - North Beach"), player))
         set_rule(multiworld.get_entrance("Mob Camp Fogless", player),
@@ -273,8 +273,8 @@ def set_rules(multiworld: MultiWorld, options: CCCharlesOptions, player: int) ->
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Mountain Ruin Outside"), player))
         set_rule(multiworld.get_entrance("Temple Fogless", player),
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Temple"), player))
-        set_rule(multiworld.get_entrance("Pickle Val Fogless", player),
-            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Pickle Val"), player))
+        set_rule(multiworld.get_entrance("Pickle Valley Fogless", player),
+            lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Pickle Valley"), player))
         set_rule(multiworld.get_entrance("Morse Bunker Fogless", player),
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Morse Bunker"), player))
 

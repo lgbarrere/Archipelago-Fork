@@ -3,7 +3,7 @@ from .BaseID import base_id
 
 
 class CCCharlesItem(Item):
-    game = "Choo-Choo Charles"
+    game = "Choo-Choo Charles - Enhanced"
 
 
 optional_items = {
@@ -31,7 +31,7 @@ optional_items = {
     "Mob Camp Key": base_id + 22,
     "Jar of Pickles": base_id + 23,
     "Track Switch Pack": base_id + 44,
-    "Track Switch - Barn or Tutorial": base_id + 45, # RailDirectionSwitcher9_26
+    "Track Switch - Barn or Junkyard": base_id + 45, # RailDirectionSwitcher9_26
     "Track Switch - Middle or Port": base_id + 46, # RailDirectionSwitcher7_20
     "Track Switch - Haunted or East": base_id + 47, # RailDirectionSwitcher6_17
     "Track Switch - North or Temple": base_id + 48, # RailDirectionSwitcher5_14
@@ -83,29 +83,29 @@ progression_items = {
     "Fogbane Relic - Canyon": base_id + 60,
     "Fogbane Relic - Watchtower": base_id + 61,
     "Fogbane Relic - Haunted House": base_id + 62,
-    "Fogbane Relic - Santiago House": base_id + 63,
+    "Fogbane Relic - Santiago's House": base_id + 63,
     "Fogbane Relic - Port": base_id + 64,
     "Fogbane Relic - Doll Woods": base_id + 65,
-    "Fogbane Relic - East House": base_id + 66,
+    "Fogbane Relic - Cliff House": base_id + 66,
     "Fogbane Relic - Rocket Grounds": base_id + 67,
     "Fogbane Relic - Workshop": base_id + 68,
-    "Fogbane Relic - East Tower": base_id + 69,
+    "Fogbane Relic - Tower Near Workshop": base_id + 69,
     "Fogbane Relic - Lighthouse": base_id + 70,
     "Fogbane Relic - North Mine Outside": base_id + 71,
-    "Fogbane Relic - Wood Bridge": base_id + 72,
+    "Fogbane Relic - Wooden Bridge": base_id + 72,
     "Fogbane Relic - Museum": base_id + 73,
     "Fogbane Relic - Barbed Shelter": base_id + 74,
     "Fogbane Relic - West Beach": base_id + 75,
     "Fogbane Relic - Church": base_id + 76,
     "Fogbane Relic - West Cottage": base_id + 77,
     "Fogbane Relic - Trailer Cabin": base_id + 78,
-    "Fogbane Relic - Towers": base_id + 79,
+    "Fogbane Relic - Tall Towers": base_id + 79,
     "Fogbane Relic - North Beach": base_id + 80,
     "Fogbane Relic - Mob Camp": base_id + 81,
     "Fogbane Relic - Mine Elevator Exit": base_id + 82,
     "Fogbane Relic - Mountain Ruin Outside": base_id + 83,
     "Fogbane Relic - Temple": base_id + 84,
-    "Fogbane Relic - Pickle Val": base_id + 85,
+    "Fogbane Relic - Pickle Valley": base_id + 85,
     "Fogbane Relic - Morse Bunker": base_id + 86
 }
 
@@ -186,34 +186,34 @@ item_groups = {
         "Fogbane Relic - Canyon",
         "Fogbane Relic - Watchtower",
         "Fogbane Relic - Haunted House",
-        "Fogbane Relic - Santiago House",
+        "Fogbane Relic - Santiago's House",
         "Fogbane Relic - Port",
         "Fogbane Relic - Doll Woods",
-        "Fogbane Relic - East House",
+        "Fogbane Relic - Cliff House",
         "Fogbane Relic - Rocket Grounds",
         "Fogbane Relic - Workshop",
-        "Fogbane Relic - East Tower",
+        "Fogbane Relic - Tower Near Workshop",
         "Fogbane Relic - Lighthouse",
         "Fogbane Relic - North Mine Outside",
-        "Fogbane Relic - Wood Bridge",
+        "Fogbane Relic - Wooden Bridge",
         "Fogbane Relic - Museum",
         "Fogbane Relic - Barbed Shelter",
         "Fogbane Relic - West Beach",
         "Fogbane Relic - Church",
         "Fogbane Relic - West Cottage",
         "Fogbane Relic - Trailer Cabin",
-        "Fogbane Relic - Towers",
+        "Fogbane Relic - Tall Towers",
         "Fogbane Relic - North Beach",
         "Fogbane Relic - Mob Camp",
         "Fogbane Relic - Mine Elevator Exit",
         "Fogbane Relic - Mountain Ruin Outside",
         "Fogbane Relic - Temple",
-        "Fogbane Relic - Pickle Val",
+        "Fogbane Relic - Pickle Valley",
         "Fogbane Relic - Morse Bunker"
     },
     "Track Switches": {
         "Track Switch Pack",
-        "Track Switch - Barn or Tutorial",
+        "Track Switch - Barn or Junkyard",
         "Track Switch - Middle or Port",
         "Track Switch - Haunted or East",
         "Track Switch - North or Temple",
