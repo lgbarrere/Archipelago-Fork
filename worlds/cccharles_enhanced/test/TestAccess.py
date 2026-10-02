@@ -10,7 +10,7 @@ class TestAccess(CCCharlesTestBase):
             "cursed_fogs": Options.CursedFogs.option_all # Lock Lighthouse
         }
 
-        lighthouse_claire_mission_end = self.world.get_location("Lighthouse, Claire - Mission End")
+        lighthouse_claire_mission_end = self.world.get_location("Lighthouse - Claire: Mission End")
 
         state = CollectionState(self.multiworld)
         # Do not collect Fogbane Relics: keep Lighthouse locked
