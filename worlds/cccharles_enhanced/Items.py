@@ -109,13 +109,11 @@ progression_items = {
     "Fogbane Relic - Morse Bunker": base_id + 86
 }
 
+# List the guns to index the StartingGun in generate_early()
+guns_list = ["Derailer", "Bug Spray", "The Boomer", "Bob"]
+
 item_groups = {
-    "Guns": {
-        "Derailer",
-        "Bug Spray",
-        "The Boomer",
-        "Bob"
-    },
+    "Guns": set(guns_list),
     "Paint Can": {
         "Orange Paint Can",
         "Green Paint Can",

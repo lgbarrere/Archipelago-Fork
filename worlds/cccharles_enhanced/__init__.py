@@ -1,4 +1,4 @@
-from .Items import CCCharlesItem, unique_item_dict, item_groups
+from .Items import CCCharlesItem, unique_item_dict, item_groups, guns_list
 from .Locations import location_table
 from .Options import CCCharlesOptions
 from .Rules import set_rules
@@ -63,6 +63,12 @@ class CCCharlesWorld(World):
     options: CCCharlesOptions
 
     topology_present = False # Hide path to required location checks in spoiler
+
+    def generate_early(self) -> None:
+        # Pre-collect the chosen StartingGun in Options.py
+        gun_index = self.options.starting_gun.value
+        if 0 <= gun_index <= 3: # Index in [0, 3], see StartingGun in Options.py
+            self.multiworld.push_precollected(self.create_item(guns_list[gun_index]))
 
     def create_regions(self) -> None:
         create_regions(self.multiworld, self.options, self.player)
@@ -338,7 +344,7 @@ class CCCharlesWorld(World):
             full_item_list += ["Armor Level"] * 9
             number_of_scraps -= 9
 
-        # Do not add the starting gun to full_item_list
+        # Do not add the StartingGun to full_item_list
         if self.options.starting_gun != "the_boomer":
             full_item_list += ["The Boomer"] * 1
         if self.options.starting_gun != "bob":
