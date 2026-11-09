@@ -106,7 +106,8 @@ progression_items = {
     "Fogbane Relic - Mountain Ruin Outside": base_id + 83,
     "Fogbane Relic - Temple": base_id + 84,
     "Fogbane Relic - Pickle Valley": base_id + 85,
-    "Fogbane Relic - Morse Bunker": base_id + 86
+    "Fogbane Relic - Morse Bunker": base_id + 86,
+    "Train Station Key": base_id + 94
 }
 
 # List the guns to index the StartingGun in generate_early()
@@ -138,7 +139,8 @@ item_groups = {
         "Armor Unlock",
         "Speed Level",
         "Damage Level",
-        "Armor Level"
+        "Armor Level",
+        "Train Station Key"
     },
     "Mine Keys": {
         "South Mine Key",

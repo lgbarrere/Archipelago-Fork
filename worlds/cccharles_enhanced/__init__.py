@@ -263,6 +263,8 @@ class CCCharlesWorld(World):
                 classification = ItemClassification.useful
             case "Derailer":
                 classification = ItemClassification.useful
+            case "Train Station Key":
+                classification = ItemClassification.progression
             case _: # Should not occur
                 raise InvalidItemError("Unexpected case met: classification cannot be set for unknown item \"" + name + "\"")
 
@@ -354,6 +356,9 @@ class CCCharlesWorld(World):
         if self.options.starting_gun != "derailer":
             full_item_list += ["Derailer"] * 1
 
+        if self.options.train_access.value:
+            full_item_list += ["Train Station Key"] * 1
+
         full_item_list += ["Scraps"] * number_of_scraps
         full_item_list += ["30 Scraps Reward"] * 3
         full_item_list += ["25 Scraps Reward"] * 1
@@ -411,6 +416,7 @@ class CCCharlesWorld(World):
             "DamageUpgrade": self.options.damage_upgrade.value,
             "ArmorUpgrade": self.options.armor_upgrade.value,
             "StartingGun": self.options.starting_gun.value,
+            "TrainAccess": self.options.train_access.value,
             "DeathLink": self.options.death_link.value
         }
         return slot_data

@@ -1,5 +1,6 @@
 from BaseClasses import Location
 from .BaseID import base_id
+from .Options import CCCharlesOptions
 
 
 class CCCharlesLocation(Location):
@@ -858,6 +859,10 @@ loc_temple = {
     "Temple - Scraps: Around, East, On Path": base_id + 1691 # ItemPickup219_59 MainShrine_ExteriorDetails (X=21563.559 Y=-23705.184 Z=10895.696)
 }
 
+loc_start_station = {
+    "Start Station - Train Station Key": base_id + 1692 # Train_KeyPickup Photorealistic_Island (X=-8816.341 Y=23392.416 Z=10219.855)
+}
+
 
 # All locations
 location_table: dict[str, int] = {
@@ -911,5 +916,6 @@ location_table: dict[str, int] = {
     **loc_temple,
     **loc_pickle_valley,
     **loc_shrine_near_temple,
-    **loc_morse_bunker
+    **loc_morse_bunker,
+    **loc_start_station
 }

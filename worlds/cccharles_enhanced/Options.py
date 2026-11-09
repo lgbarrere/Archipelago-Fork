@@ -110,6 +110,15 @@ class StartingGun(Choice):
     visibility = Visibility.all
 
 
+class TrainAccess(Toggle):
+    """
+    The key to access the train is randomized if this option is enabled.
+    The train is deactivated right after the tutorial while the key is not received.
+    """
+    display_name = "Train access"
+    visibility = Visibility.all
+
+
 @dataclass
 class CCCharlesOptions(PerGameCommonOptions):
     start_inventory_from_pool: StartInventoryPool
@@ -119,4 +128,5 @@ class CCCharlesOptions(PerGameCommonOptions):
     damage_upgrade: DamageUpgrade
     armor_upgrade: ArmorUpgrade
     starting_gun: StartingGun
+    train_access: TrainAccess
     death_link: DeathLink

@@ -2,8 +2,6 @@ from BaseClasses import MultiWorld
 from ..generic.Rules import set_rule
 from .Options import CCCharlesOptions
 
-# Go mode: Green Egg + Blue Egg + Red Egg + Temple Key + Bug Spray (+ Remote Explosive x8 but the base game ignores it)
-
 def set_rules(multiworld: MultiWorld, options: CCCharlesOptions, player: int) -> None:
     # Tony Tiddle
     set_rule(multiworld.get_entrance("Barn Door", player),
@@ -278,8 +276,18 @@ def set_rules(multiworld: MultiWorld, options: CCCharlesOptions, player: int) ->
         set_rule(multiworld.get_entrance("Morse Bunker Fogless", player),
             lambda state: state.has_any((fogbane_relic_pack, "Fogbane Relic - Morse Bunker"), player))
 
-    # Add rules to reach the "Go mode"
+    ## Add rules to reach the "Go mode" ##
+    # Required:
+    # -> Temple Key + Green Egg + Blue Egg + Red Egg
+    # -> Train Station Key (if option enabled, ignored by the base game)
+    # Optional:
+    # -> Remote Explosive x8 (ignored by the base game)
+    # -> Bug Spray (for Nightmare mode if not enough scraps)
+    # Additional cases:
+    # -> Fogbane Relic - Temple (or Pack)
     required_items = ["Temple Key", "Green Egg", "Blue Egg", "Red Egg"]
+    if options.train_access:
+        required_items.append("Train Station Key")
     if options.cursed_fogs == "once":
         required_items.append(fogbane_relic_pack)
     elif options.cursed_fogs == "all":

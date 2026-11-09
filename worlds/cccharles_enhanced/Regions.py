@@ -12,7 +12,7 @@ from .Locations import (
     loc_barbed_shelter, loc_west_beach, loc_church, loc_west_cottage, loc_caravan, loc_trailer_cabin, \
     loc_tall_towers, loc_north_beach, loc_mine_shaft, loc_mob_camp, loc_mob_camp_locked_room, \
     loc_mine_elevator_exit, loc_mountain_ruin_outside, loc_mountain_ruin_inside, loc_temple, \
-    loc_pickle_valley, loc_shrine_near_temple, loc_morse_bunker
+    loc_pickle_valley, loc_shrine_near_temple, loc_morse_bunker, loc_start_station
 )
 
 
@@ -224,6 +224,12 @@ def create_regions(multiworld: MultiWorld, options: CCCharlesOptions, player: in
     morse_bunker_region.add_locations(loc_morse_bunker, CCCharlesLocation)
     multiworld.regions.append(morse_bunker_region)
 
+    start_station_region = Region("Start Station", player, multiworld)
+    # Add locations to depending on TrainAccess from Option.py
+    if options.train_access.value:
+        start_station_region.add_locations(loc_start_station, CCCharlesLocation)
+    multiworld.regions.append(start_station_region)
+
     # Place "Victory" event at "Final Boss" location
     loc_final_boss = CCCharlesLocation(player, "Final Boss", None, temple_region)
     loc_final_boss.place_locked_item(CCCharlesItem("Victory", ItemClassification.progression, None, player))
@@ -281,3 +287,4 @@ def create_regions(multiworld: MultiWorld, options: CCCharlesOptions, player: in
     menu_region.connect(pickle_valley_region, "Pickle Valley Fogless")
     menu_region.connect(shrine_near_temple_region)
     menu_region.connect(morse_bunker_region, "Morse Bunker Fogless")
+    menu_region.connect(start_station_region)
